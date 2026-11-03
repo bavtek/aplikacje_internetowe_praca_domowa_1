@@ -469,3 +469,74 @@ main > section.faq {
     background-color: var(--color-red-dark);
     transform: translateY(-3px);
 }
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 0.5rem 1.25rem 1rem;
+        background-color: var(--color-blue-dark);
+        border-bottom: 4px solid var(--color-red);
+    }
+
+    .main-nav.open {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .nav-list a {
+        padding: 0.9rem 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 0;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    main > section {
+        padding: 3rem 1rem;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .countdown-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .countdown-item {
+        min-width: 0;
+    }
+
+    .filters {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
