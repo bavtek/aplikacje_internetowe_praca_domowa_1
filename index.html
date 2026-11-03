@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Atrakcje turystyczne Czech">
+    <title>Czechy na luzie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a href="#hero" class="logo">Odkryj Czechy</a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Otwórz menu">☰</button>
+        <nav id="main-nav" class="main-nav" aria-label="Menu główne">
+            <ul class="nav-list">
+                <li><a href="#licznik">Licznik</a></li>
+                <li><a href="#atrakcje">Atrakcje</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Czechy na luzie</h1>
+                <p>Odkryj z nami kraj Szwejka i Krecika</p>
+                <a href="#atrakcje" class="btn">Zobacz atrakcje</a>
+            </div>
+        </section>
+        <section id="licznik" class="countdown">
+            <h2>Do wakacji zostało</h2>
+            <div class="countdown-box" id="countdown" aria-live="polite">
+                <div class="countdown-item"><span id="days">0</span><small>dni</small></div>
+                <div class="countdown-item"><span id="hours">0</span><small>godz.</small></div>
+                <div class="countdown-item"><span id="minutes">0</span><small>min</small></div>
+                <div class="countdown-item"><span id="seconds">0</span><small>sek</small></div>
+            </div>
+            <!-- TODO: Obsługa odliczania w JavaScript -->
+        </section>
+        <section id="atrakcje" class="attractions">
+            <h2>Atrakcje</h2>
+            <div class="filters" role="group" aria-label="Filtruj atrakcje">
+                <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                <button class="filter-btn" data-filter="miasta">Miasta</button>
+                <button class="filter-btn" data-filter="zamki">Zabytki</button>
+                <button class="filter-btn" data-filter="przyroda">Przyroda</button>
+            </div>
+            <div class="card-grid">
+                <article class="card" data-category="">
+                    <img src="" alt="[Opis zdjęcia]">
+                    <div class="card-body">
+                        <h3>Atrakcja 1</h3>
+                        <p>[Krótki opis atrakcji]</p>
+                    </div>
+                </article>
+                <article class="card" data-category="">
+                    <img src="" alt="[Opis zdjęcia]">
+                    <div class="card-body">
+                        <h3>Atrakcja 2</h3>
+                        <p>[Krótki opis atrakcji]</p>
+                    </div>
+                </article>
+                <article class="card" data-category="">
+                    <img src="" alt="[Opis zdjęcia]">
+                    <div class="card-body">
+                        <h3>Atrakcja 3</h3>
+                        <p>[Krótki opis atrakcji]</p>
+                    </div>
+                </article>
+                <article class="card" data-category="">
+                    <img src="" alt="[Opis zdjęcia]">
+                    <div class="card-body">
+                        <h3>Atrakcja 4</h3>
+                        <p>[Krótki opis atrakcji]</p>
+                    </div>
+                </article>
+                <!-- TODO: Uzupełnij i dodaj więcej kart atrakcji w razie potrzeby -->
+            </div>
+        </section>
+        <section id="galeria" class="gallery">
+            <h2>Galeria</h2>
+            <div class="gallery-grid">
+                <img src="" alt="[Opis zdjęcia]">
+                <img src="" alt="[Opis zdjęcia]">
+                <img src="" alt="[Opis zdjęcia]">
+                <img src="" alt="[Opis zdjęcia]">
+            </div>
+            <!-- TODO: Dodaj obrazy do galerii -->
+        </section>
+        <section id="faq" class="faq">
+            <h2>Ciekawostki i FAQ</h2>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Pytanie 1?</button>
+                <div class="faq-answer" hidden>
+                <p>[Odpowiedź]</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Pytanie 2?</button>
+                <div class="faq-answer" hidden>
+                <p>[Odpowiedź]</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">Pytanie 3?</button>
+                <div class="faq-answer" hidden>
+                <p>[Odpowiedź]</p>
+                </div>
+            </div>
+            <!-- TODO: Dodaj pytania i odpowiedzi -->
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2026 Bartłomiej Topyła</p>
+        <p>
+            <a href="" target="_blank" rel="noopener">Repozytorium na GitHubie</a>
+        </p>
+        <p>Źródła zdjęć:
+            <br><a href="" target="_blank" rel="noopener">[Źródło]</a>
+            <br><a href="" target="_blank" rel="noopener">[Źródło]</a>
+        </p>
+        <!-- TODO: Dodaj aktywne linki -->
+    </footer>
+  <button id="back-to-top" class="back-to-top" aria-label="Wróć na górę" hidden>↑</button>
+</body>
+</html>
