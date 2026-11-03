@@ -175,12 +175,6 @@ main > section.faq {
     opacity: 0.85;
 }
 
-.logo:hover {
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    opacity: 0.85;
-}
-
 .nav-toggle {
     display: none;
     width: 44px;
