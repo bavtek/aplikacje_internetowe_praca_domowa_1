@@ -79,3 +79,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+    const desktopQuery = window.matchMedia('(min-width: 769px)');
+ 
+    function setMenu(open) {
+        mainNav.classList.toggle('open', open);
+        navToggle.setAttribute('aria-expanded', String(open));
+        navToggle.setAttribute('aria-label', open ? 'Zamknij menu' : 'Otwórz menu');
+        navToggle.textContent = open ? '✕' : '☰';
+    }
+ 
+    navToggle.addEventListener('click', () => {
+        setMenu(!mainNav.classList.contains('open'));
+    });
+ 
+    mainNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => setMenu(false));
+    });
+ 
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && mainNav.classList.contains('open')) {
+            setMenu(false);
+            navToggle.focus();
+        }
+    });
+ 
+    desktopQuery.addEventListener('change', (event) => {
+        if (event.matches) {
+            setMenu(false);
+        }
+    });
+});
+ 
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTop = document.getElementById('back-to-top');
+    const SHOW_AFTER = 400;
+ 
+    function toggleBackToTop() {
+        backToTop.hidden = window.scrollY < SHOW_AFTER;
+    }
+ 
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+ 
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+ 
+    toggleBackToTop();
+});

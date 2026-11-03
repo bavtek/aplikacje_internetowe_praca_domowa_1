@@ -333,10 +333,6 @@ main > section.hero {
     color: var(--color-text-muted);
 }
 
-.card.is-hidden {
-    display: none;
-}
-
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -539,4 +535,9 @@ main > section.faq {
     .card-grid {
         grid-template-columns: 1fr;
     }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }    
 }
