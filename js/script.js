@@ -64,3 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
  
     filterCards('all');
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+ 
+    faqQuestions.forEach((question) => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isOpen = question.getAttribute('aria-expanded') === 'true';
+ 
+            question.setAttribute('aria-expanded', String(!isOpen));
+            answer.hidden = isOpen;
+            question.closest('.faq-item').classList.toggle('open', !isOpen);
+        });
+    });
+});
