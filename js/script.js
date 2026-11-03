@@ -37,3 +37,30 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card-grid .card');
+ 
+    function filterCards(category) {
+        cards.forEach((card) => {
+            const matches = category === 'all' || card.dataset.category === category;
+            card.hidden = !matches;
+        });
+    }
+ 
+    filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach((btn) => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+            });
+            button.classList.add('active');
+            button.setAttribute('aria-pressed', 'true');
+ 
+            filterCards(button.dataset.filter);
+        });
+    });
+ 
+    filterCards('all');
+});
